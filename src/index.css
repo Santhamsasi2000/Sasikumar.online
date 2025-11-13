@@ -1,0 +1,50 @@
+/* Tailwind CSS */
+@import "tailwindcss";
+
+@theme
+{
+  /* ====  Blue Color ===== Background Color -  */
+  --color-blue-50: #ebfffe;
+  --color-blue-100: #ccffff;
+  --color-blue-200: #a0fdff;
+  --color-blue-300: #5ef9ff;
+  --color-blue-400: #16eafa;
+  --color-blue-500: #00cde0;
+  --color-blue-600: #00a3bc;
+  --color-blue-700: #068c9f;
+  --color-blue-800: #0f687b;
+  --color-blue-900: #115568; 
+  --color-blue-950: #043948; 
+
+
+  /* === Breakpoints (responsive sizes) === */
+  --breakpoint-xs: 400px;   /* Extra Small devices (mobile) */
+  --breakpoint-sm: 576px;   /* Small devices (mobile) */
+  --breakpoint-md: 768px;   /* Medium devices (tablet) */
+  --breakpoint-lg: 992px;  /* Large devices (laptop) */
+  --breakpoint-xl: 1200px;  /* Extra large screens */
+  --breakpoint-2xl: 1440px; /* 2X large screens */
+
+  /* ===== Fonts ==== */
+
+  --font-merienda: "Merienda", cursive; 
+  --font-sora: "Sora", sans-serif;
+  --font-radley: "Radley", serif;
+  --font-neuton: "Neuton", serif;
+}
+
+html 
+{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after
+{
+  box-sizing: inherit;
+}
+
+body
+{
+    font-family: "Roboto", sans-serif;
+}
