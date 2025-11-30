@@ -18,7 +18,8 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <App/>
-      {/* <HeroSection/> */}
+      {/* <HeroSection/>
+      <HeroCTA/> */}
     </BrowserRouter>
   </StrictMode>,
 )

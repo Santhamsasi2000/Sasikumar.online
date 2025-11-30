@@ -27,10 +27,9 @@
 
   /* ===== Fonts ==== */
 
-  --font-merienda: "Merienda", cursive; 
-  --font-sora: "Sora", sans-serif;
-  --font-radley: "Radley", serif;
   --font-neuton: "Neuton", serif;
+  --font-rubik: "Rubik Moonrocks", sans-serif;
+
 }
 
 html 
@@ -46,5 +45,5 @@ html
 
 body
 {
-    font-family: "Roboto", sans-serif;
+    font-family: "Karla", sans-serif;
 }
