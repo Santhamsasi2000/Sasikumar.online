@@ -7,7 +7,7 @@ const subtitle = "I create fast, modern, and SEO-friendly websites to help busin
 const HeroSection = () => {
   return (
     <section className="mt-15 xs:mt-6 lg:hidden relative h-130 xs:h-150 
-    flex items-center justify-start bg-white">
+    flex items-center justify-start bg-white">                        
 
       {/* Background image with overlay */}
       <div className="absolute inset-0 flex justify-center">
@@ -16,7 +16,7 @@ const HeroSection = () => {
           alt="AC Technician"
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-white/70" />
+        <div className="absolute inset-0 bg-white/90" />
       </div>
 
       {/* Content */}

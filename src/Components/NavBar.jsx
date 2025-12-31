@@ -63,7 +63,7 @@ const NavBar = () => {
           src="/images/NavBar/sasikumar.online-logo-4.jpeg"
           threshold={200} effect="blur"/>
           <motion.h1 
-          className="text-2xl sm:text-3xl font-black mb-0 font-rubik"
+          className="text-2xl sm:text-3xl font-bold mb-0 font-merienda"
           whileHover={{scale: 1.05}}
           transition={{ type: "spring", stiffness: 300 }}
           >

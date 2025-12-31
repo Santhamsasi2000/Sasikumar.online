@@ -5,7 +5,6 @@ import HeroCTA from "../Home/HeroCTA"
 import HeroSection from "../Home/HeroSection"
 import LatestWorks from "../Home/LatestWorks"
 import Services from "../Home/Services"
-import ServicesHome from "../Home/Services"
 
 const Home = () => {
   return (
