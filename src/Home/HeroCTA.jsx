@@ -54,11 +54,11 @@ const HeroCTA = () => {
               px-5 xs:px-6 py-2 rounded-lg">
                 <FaLaptopCode className="text-lg"/>View My Work
               </NavLink>
-              <a href="https://api.whatsapp.com/send?phone=6384379814" 
+              <a href="https://api.whatsapp.com/send?phone=6369499827" 
                 target="_blank" rel="noopener noreferrer" 
               className="flex items-center gap-2 border border-blue-600 text-blue-700
               px-5 xs:px-6 py-2 rounded-lg" 
-              aria-label="Call us at 6384379814">
+              aria-label="Call us at 6369499827">
                 <FaWhatsapp className="text-lg"/>Hire Me
               </a>
           </div>

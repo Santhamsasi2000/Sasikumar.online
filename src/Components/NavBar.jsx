@@ -91,7 +91,7 @@ const NavBar = () => {
         </ul>
 
         <ul className="hidden lg:block">
-           <a href="https://api.whatsapp.com/send?phone=6384379814" 
+           <a href="https://api.whatsapp.com/send?phone=6369499827" 
             target="_blank" 
             rel="noopener noreferrer"
             className="bg-white px-4 py-2 flex items-center
@@ -142,7 +142,7 @@ const NavBar = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <a href="https://api.whatsapp.com/send?phone=6384379814" 
+                  <a href="https://api.whatsapp.com/send?phone=6369499827" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-white text-blue-700 px-4 py-2 flex items-center

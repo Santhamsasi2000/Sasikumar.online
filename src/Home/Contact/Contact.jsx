@@ -95,8 +95,8 @@ const contactInfo = [
         id: 2,
         icon: FaMobileAlt,
         name: "Mobile Number",
-        detail: "+91-6384379814",
-        link: "tel:6384379814",
+        detail: "+91-6369499827",
+        link: "tel:6369499827",
     },
     // {
     //     id: 3,
