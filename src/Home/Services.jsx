@@ -1,6 +1,4 @@
-import { FaBolt, FaCogs, FaKey, FaMobileAlt, FaSearch, FaTachometerAlt } from "react-icons/fa";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { NavLink } from "react-router-dom";
 
 const badge ="Services";
 const smallDesc = "Comprehensive web solutions designed to elevate your business and dominate search rankings.";

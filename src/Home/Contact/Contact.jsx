@@ -1,5 +1,5 @@
 import { BiMap } from "react-icons/bi";
-import { FaLinkedinIn, FaMobileAlt } from "react-icons/fa";
+import { FaMobileAlt } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import ContactUsForm from "./ContactForm/ContactUsForm";
 
@@ -10,9 +10,9 @@ const Contact = () => {
     <section className="p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8 2xl:p-9">
 
         {/* Badge */}
-        <div className="flex justify-center mb-1.5">
-          <span className="bg-blue-50 border-1 border-blue-200 
-           px-4 py-1 rounded-4xl text-blue-600 font-semibold">
+        <div className="flex justify-center mb-2">
+          <span className="bg-blue-50 shadow
+           px-5 py-1 rounded-4xl text-blue-800 font-semibold text-lg">
             Contact
           </span>
         </div> 
@@ -23,9 +23,8 @@ const Contact = () => {
           Let's build something amazing together
         </h2>
         
-        
         {/* Subtitle */}
-        <p className="text-center text-gray-600 text-sm sm:text-base mb-6">
+        <p className="text-center text-gray-600 text-base sm:text-lg mb-8">
           {subTitle}
         </p>
         
@@ -34,13 +33,13 @@ const Contact = () => {
           <div className="w-full xs:w-[80%] md:w-[40%] lg:w-[35%]">
 
             {/* title */}
-            <h4 className="sm:text-center md:text-start font-bold text-2xl 
-            sm:text-[26px] mb-1 md:mb-2 text-blue-800">
+            <h4 className="sm:text-center md:text-start font-bold text-2xl sm:text-3xl
+             mb-1 md:mb-2 text-blue-800">
               Get in Touch
             </h4>
 
             {/* Subtitle */}
-            <p className="text-sm sm:text-base sm:text-center md:text-start text-gray-600 mb-4">
+            <p className="text-base sm:text-lg sm:text-center md:text-start text-gray-600 mb-4">
               Have a project in mind? Let's discuss how I can help your business grow.
             </p>
 

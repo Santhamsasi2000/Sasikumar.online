@@ -17,7 +17,7 @@ const OurWorks = () => {
        </h1>
 
        {/* subtitle */}
-      <p className="text-sm sm:text-base mb-8 text-gray-600">Take a look at some of my projects, all built using 
+      <p className="text-base sm:text-lg mb-8 text-gray-600">Take a look at some of my projects, all built using 
         <span className="font-semibold"> React JS Only</span>. Each website is fully responsive and made with clean code and modern design. A few projects may not have advanced SEO, animations, or performance features because 
         <span className="font-semibold"> the clients had budget limits or didn’t complete payment.</span>
       </p>

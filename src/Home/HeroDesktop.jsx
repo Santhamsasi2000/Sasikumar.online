@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const subtitle = "I create fast, modern, and SEO-friendly websites to help businesses grow. Specializing in custom solutions with React, Tailwind CSS, and full-stack development.";
 
-const HeroCTA = () => {
+const HeroDesktop = () => {
   return (
     <section className="hidden lg:block lg:p-7 xl:p-9 2xl:p-10 mt-20">
       <div className="flex flex-wrap justify-between">
@@ -72,4 +72,4 @@ const HeroCTA = () => {
   )
 }
 
-export default HeroCTA
+export default HeroDesktop

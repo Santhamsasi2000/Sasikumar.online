@@ -28,7 +28,7 @@ const ContactUsForm = () => {
         const { default: Swal } = await import("sweetalert2");
         Swal.fire({
           title: "MESSAGE SENT !",
-          text: "Thank you for contacting us. You will receive a response within two hours. If you do not receive a response, please send us a WhatsApp message at +91-6384379814.",
+          text: "Thank you for contacting us. You will receive a response within two hours. If you do not receive a response, please send us a WhatsApp message at +91-6369499827.",
           icon: "success",
         });
         resetForm();
@@ -66,9 +66,9 @@ const ContactUsForm = () => {
       >
         {({ isSubmitting }) => (
           <Form>
-            <h2 className="text-blue-800 text-2xl sm:text-[26px] font-bold 
+            <h2 className="text-blue-800 text-2xl sm:text-3xl font-bold 
             mb-2 sm:text-center md:text-left">{title}</h2>
-            <p className="mb-5 text-gray-600 text-sm xs:text-base 
+            <p className="mb-5 text-gray-600 text-base xs:text-lg
             sm:text-center md:text-left">
               {subTitle}
             </p>

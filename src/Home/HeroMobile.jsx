@@ -4,9 +4,9 @@ import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion"
 
 const subtitle = "I create fast, modern, and SEO-friendly websites to help businesses grow. Specializing in custom solutions with React, Tailwind CSS, and full-stack development.";
-const HeroSection = () => {
+const HeroMobile = () => {
   return (
-    <section className="mt-15 xs:mt-6 lg:hidden relative h-130 xs:h-150 
+    <section className="mt-18 xs:mt-8 lg:hidden relative h-130 xs:h-150 
     flex items-center justify-start bg-white">                        
 
       {/* Background image with overlay */}
@@ -91,4 +91,4 @@ const HeroSection = () => {
   )
 }
 
-export default HeroSection
+export default HeroMobile

@@ -59,7 +59,7 @@ const NavBar = () => {
        <div className="flex items-center justify-between">
         {/* Brand */}
         <NavLink to="/" className="text-white flex items-center gap-3">
-          <LazyLoadImage className="w-[50px] h-[40px]" 
+          <LazyLoadImage className="w-[40px] h-[30px] sm:w-[50px] sm:h-[35px]"  
           src="/images/NavBar/sasikumar.online-logo-4.jpeg"
           threshold={200} effect="blur"/>
           <motion.h1 

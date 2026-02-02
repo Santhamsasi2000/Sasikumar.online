@@ -38,6 +38,32 @@ export const DataWorks = [
         location: "Cuddalore, Tamil Nadu.",
         weblink: "https://www.crafttime.in/",
     },
+    {
+        websiteType: "Counselling",
+        image: "/images/Projects/ceo-career-educators-overseas.webp",
+        title: "CEO - Career Educators Overseas",
+        desc: "A trusted counselling platform guiding students for Engineering & MBBS admissions in India and Abroad.",
+        techStack: [
+            "React JS",
+            "Bootstrap",
+            "SEO Optimizied"
+        ],
+        location: "Valasaravakkam, Chennai",
+        weblink: "https://www.gowithceo.com/",
+    },
+     {
+        websiteType: "Healthcare",
+        image: "/images/Projects/ks-healthcare-center.png",
+        title: "K.S Health Care Centre",
+        desc: "A trusted neighbourhood medical centre providing quality healthcare, advanced diagnostics, and modern physiotherapy with compassionate care — serving the Thiruvallur community with 24/7 medical support.",
+        techStack: [
+            "React JS",
+            "Tailwind CSS",
+            "SEO Optimized"
+        ],
+        location: "Thiruvallur, Tamil Nadu.",
+        weblink: "https://www.kshealthcare.site/",
+    },
     {   
         websiteType: "Consulting",
         image: "/images/Projects/problem-solving.jpg",
@@ -51,19 +77,7 @@ export const DataWorks = [
         location: "Coimbatore, Tamil Nadu.",
         weblink: "https://www.problemsolvingconsultancy.com/",
     },
-    {
-        websiteType: "Healthcare",
-        image: "/images/Projects/ks-healthcare-center.png",
-        title: "K.S Health Care Centre",
-        desc: "A trusted neighbourhood medical centre providing quality healthcare, advanced diagnostics, and modern physiotherapy with compassionate care — serving the Thiruvallur community with 24/7 medical support.",
-        techStack: [
-            "React JS",
-            "Tailwind CSS",
-            "SEO Optimized"
-        ],
-        location: "Thiruvallur, Tamil Nadu.",
-        weblink: "https://www.kshealthcare.site/",
-    },
+   
     {
         websiteType: "Education",
         image: "/images/Projects/shanthiRani-school.webp",
@@ -105,16 +119,4 @@ export const DataWorks = [
     },
 ];
 
- // {
-    //     websiteType: "Frontend",
-    //     image: "/images/Projects/ceo-career-educators-overseas.webp",
-    //     title: "CEO - Career Educators Overseas",
-    //     desc: "A trusted counselling platform guiding students for Engineering & MBBS admissions in India and Abroad.",
-    //     techStack: [
-    //         "React JS",
-    //         "Bootstrap",
-    //         "SEO Optimizied"
-    //     ],
-    //     location: "Valasaravakkam, Chennai",
-    //     weblink: "https://www.gowithceo.com/",
-    // },
+ 
