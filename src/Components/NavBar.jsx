@@ -1,164 +1,174 @@
-import { Link, NavLink } from "react-router-dom";
-import { FaArrowRight, FaWhatsapp } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
+import { FaWhatsapp } from "react-icons/fa";
 import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const NavBar = () => {
-   const [menuOpen, setMenuOpen] = useState(false);
-   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-   useEffect(()=>{
-    const handleScroll = () =>{
-      if(window.scrollY > 50)
-      {
-        setScrolled(true);
-      }
-      else
-      {
-        setScrolled(false);
-      }
-    }
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-   }, []);
+  }, []);
 
-    const toggleMenu = () => 
-    {
-      setMenuOpen(prev => !prev)
-    };
+  const toggleMenu = () => setMenuOpen((prev) => !prev);
+  const closeMenu = () => setMenuOpen(false);
 
-    const closeMenu = () => {
-      setMenuOpen(false);
-    }
+  /* Animation Variants */
+  const navVariants = {
+    hidden: { y: -80, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 1, ease: "easeOut" },
+    },
+  };
 
-    //Animation Variants
-    const navVariants = {
-      hidden: { y: -80, opacity: 0 },
-      visible: { y:0, opacity: 1 , transition: { duration: 1.5, ease: "easeOut" }}
-    };
-
-    const menuVariants = {
-      hidden: { x: 80, opacity: 0 },
-      visible: { x: 0, opacity: 1 , transition: { duration:1, ease: "easeOut" }},
-      exit: { x: 80, opacity: 0 , transition: { duration: 1, ease: "easeIn" }}
-    };
+  const menuVariants = {
+    hidden: { x: 80, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+    exit: {
+      x: 80,
+      opacity: 0,
+      transition: { duration: 0.4, ease: "easeIn" },
+    },
+  };
 
   return (
-    <motion.nav 
-      className={`p-3 sm:p-4
-      transition-colors duration-300 ease-in-out fixed left-0 right-0 top-0 z-50 shadow-md 
-      ${scrolled ? "bg-blue-700 shadow-md"
-          : "bg-blue-700" }
-          `}
+    <motion.nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
+        ${scrolled ? "bg-blue-700 shadow-lg" : "bg-blue-700"}
+      `}
       initial="hidden"
       animate="visible"
       variants={navVariants}
-      >
-       <div className="flex items-center justify-between">
-        {/* Brand */}
-        <NavLink to="/" className="text-white flex items-center gap-3">
-          <LazyLoadImage className="w-[40px] h-[30px] sm:w-[50px] sm:h-[35px]"  
-          src="/images/NavBar/sasikumar.online-logo-4.jpeg"
-          threshold={200} effect="blur"/>
-          <motion.h1 
-          className="text-2xl sm:text-3xl font-bold mb-0 font-merienda"
-          whileHover={{scale: 1.05}}
-          transition={{ type: "spring", stiffness: 300 }}
+    >
+      <div className="flex items-center justify-between p-3 sm:p-4 max-w-7xl mx-auto">
+        
+        {/* Logo / Brand */}
+        <NavLink to="/" className="flex items-center gap-3 text-white">
+          <LazyLoadImage
+            src="/images/NavBar/sasikumar.online-logo-4.jpeg"
+            alt="Sasikumar logo"
+            className="w-[40px] h-[30px] sm:w-[50px] sm:h-[35px] object-contain"
+            effect="blur"
+          />
+          <motion.h1
+            className="text-2xl sm:text-3xl font-bold font-merienda"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 300 }}
           >
             Sasikumar
           </motion.h1>
         </NavLink>
-        
-        {/*======= Desktop Menus ====== */}
-        {/* ====== sm to xxl ========*/}
-        {/* Menus */}
 
+        {/* Desktop Menu */}
         <ul className="hidden md:flex gap-10">
-          <li className="">
-            <NavLink className="text-white font-bold text-lg" to="/" onClick={closeMenu}>
+          <li>
+            <NavLink
+              to="/"
+              className="text-white font-semibold text-lg hover:text-blue-200"
+            >
               Home
             </NavLink>
           </li>
-
-          <li className="">
-            <NavLink className="text-white font-bold text-lg" to="/projects" onClick={closeMenu}>
-               My Works
+          <li>
+            <NavLink
+              to="/projects"
+              className="text-white font-semibold text-lg hover:text-blue-200"
+            >
+              My Works
             </NavLink>
           </li>
-
         </ul>
 
-        <ul className="hidden lg:block">
-           <a href="https://api.whatsapp.com/send?phone=6369499827" 
-            target="_blank" 
+        {/* Desktop CTA */}
+        <div className="hidden lg:block">
+          <a
+            href="https://api.whatsapp.com/send?phone=6369499827"
+            target="_blank"
             rel="noopener noreferrer"
-            className="bg-white px-4 py-2 flex items-center
-            gap-1 font-bold rounded-lg text-blue-700">
-              <FaWhatsapp className="text-xl"/> Whatsapp
-           </a>
-        </ul>
+            className="bg-white text-blue-700 px-4 py-2 flex items-center gap-2 font-bold rounded-lg hover:bg-blue-50 transition"
+          >
+            <FaWhatsapp className="text-xl" />
+            Whatsapp
+          </a>
+        </div>
 
-         {/* ========== Mobile View ==========*/}
-         {/* Toggle Button */}
-         <div className="block md:hidden"> 
+        {/* Mobile Toggle */}
+        <div className="block md:hidden">
           <motion.button
-            className="mt-2"
-            type="button"
             onClick={toggleMenu}
             whileTap={{ scale: 0.9 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-            animate={{ rotate: menuOpen ? 180 : 0}}
+            animate={{ rotate: menuOpen ? 180 : 0 }}
+            className="text-white"
+            aria-label="Toggle menu"
           >
             {menuOpen ? (
-              <RxCross1 className="text-2xl text-white"/>
+              <RxCross1 className="text-2xl" />
             ) : (
-              <RxHamburgerMenu className="text-2xl text-white"/>
+              <RxHamburgerMenu className="text-2xl" />
             )}
           </motion.button>
-         </div>
-       </div>
+        </div>
+      </div>
 
-       {/* Mobile Menu */}
-        <AnimatePresence>
-        {
-            menuOpen && (
-            <motion.div
-             className="block md:hidden"
-             initial="hidden"
-             animate="visible"
-             exit="exit"
-             variants={menuVariants}>
-              <ul className="flex flex-col items-center gap-6 mt-5">
-                <li className="">
-                  <NavLink className="text-white" to="/" onClick={closeMenu}>
-                    Home
-                  </NavLink>
-                </li>
-                <li className="">
-                  <NavLink className="text-white" to="/projects" onClick={closeMenu}>
-                    My Works
-                  </NavLink>
-                </li>
-                <li>
-                  <a href="https://api.whatsapp.com/send?phone=6369499827" 
-                  target="_blank" 
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            className="md:hidden bg-blue-700"
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={menuVariants}
+          >
+            <ul className="flex flex-col items-center gap-6 py-6">
+              <li>
+                <NavLink
+                  to="/"
+                  className="text-white text-lg font-semibold"
+                  onClick={closeMenu}
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/projects"
+                  className="text-white text-lg font-semibold"
+                  onClick={closeMenu}
+                >
+                  My Works
+                </NavLink>
+              </li>
+              <li>
+                <a
+                  href="https://api.whatsapp.com/send?phone=6369499827"
+                  target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white text-blue-700 px-4 py-2 flex items-center
-                   gap-1 font-bold rounded-lg">
-                    <FaWhatsapp className="text-xl"/> Whatsapp
-                  </a>
-                </li>
-              </ul> 
-            </motion.div>
-            )
-        }
-        </AnimatePresence>
+                  className="bg-white text-blue-700 px-4 py-2 flex items-center gap-2 font-bold rounded-lg"
+                >
+                  <FaWhatsapp className="text-xl" />
+                  Whatsapp
+                </a>
+              </li>
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.nav>
-  )
-}
+  );
+};
 
-export default NavBar
-
-
+export default NavBar;

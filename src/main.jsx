@@ -7,6 +7,7 @@ import NavBar from './Components/NavBar.jsx'
 import Contact from './Home/Contact/Contact.jsx'
 import Footer from './Components/Footer.jsx'
 import OurWorks from './OurWorks/OurWorks.jsx'
+import Services from './Home/Services.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -16,6 +17,7 @@ createRoot(document.getElementById('root')).render(
       {/* <Contact/> */}
       {/* <Footer/> */}
       {/* <OurWorks/> */}
+      {/* <Services/> */}
     </BrowserRouter>
   </StrictMode>,
 )

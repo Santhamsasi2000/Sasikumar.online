@@ -1,21 +1,19 @@
-import { FaArrowRight } from "react-icons/fa"
 import { motion } from "framer-motion";
-import Swal from 'sweetalert2'
-import { Form, Formik,  } from "formik";
+import { Formik, Form } from "formik";
+import Swal from "sweetalert2";
 import { FiSend } from "react-icons/fi";
 import FormField from "./FormField";
 import { ValidationSchema } from "./ValidationSchema";
 
-
 const title = "Send Me a Message";
 const subTitle = "Fill out the form below and I'll get back to you within 24 hours.";
-const key = "8194d823-65a0-4794-8886-1f0e1cccb8b8";
+const accessKey = "8194d823-65a0-4794-8886-1f0e1cccb8b8";
 
 const ContactUsForm = () => {
   const onSubmit = async (values, { resetForm, setSubmitting }) => {
     const formData = new FormData();
     Object.keys(values).forEach((key) => formData.append(key, values[key]));
-    formData.append("access_key", key);
+    formData.append("access_key", accessKey);
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -24,72 +22,81 @@ const ContactUsForm = () => {
       });
 
       const data = await response.json();
+
       if (data.success) {
-        const { default: Swal } = await import("sweetalert2");
         Swal.fire({
-          title: "MESSAGE SENT !",
-          text: "Thank you for contacting us. You will receive a response within two hours. If you do not receive a response, please send us a WhatsApp message at +91-6369499827.",
+          title: "MESSAGE SENT!",
+          text: "Thank you for contacting me. I’ll respond shortly.",
           icon: "success",
         });
         resetForm();
-      } 
-      else 
-      {
+      } else {
         throw new Error(data.message);
       }
-    } 
-    catch (error)
-    {
-      const { default: Swal } = await import("sweetalert2");
+    } catch (error) {
       Swal.fire({
         title: "Error",
         text: error.message || "Network error. Please try again.",
         icon: "error",
       });
-    } 
-    finally 
-    {
+    } finally {
       setSubmitting(false);
     }
   };
 
   return (
-    <motion.section>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className="bg-white shadow-xl rounded-2xl p-5 sm:p-6"
+    >
       <Formik
-        initialValues={{
-          name: "",
-          email: "",
-          message: "",
-        }}
+        initialValues={{ name: "", email: "", message: "" }}
         validationSchema={ValidationSchema}
         onSubmit={onSubmit}
       >
         {({ isSubmitting }) => (
           <Form>
-            <h2 className="text-blue-800 text-2xl sm:text-3xl font-bold 
-            mb-2 sm:text-center md:text-left">{title}</h2>
-            <p className="mb-5 text-gray-600 text-base xs:text-lg
-            sm:text-center md:text-left">
+            <h2 className="text-blue-800 text-2xl sm:text-3xl font-bold mb-2">
+              {title}
+            </h2>
+
+            <p className="mb-5 text-gray-600 text-base sm:text-lg">
               {subTitle}
             </p>
 
             <FormField name="name" label="Name" placeholder="Your Name *" />
-            <FormField name="email" label="Email Address" type="email" placeholder="Enter Your Email Id *" />
-            <FormField name="message" label="Message (Optional)" as="textarea" placeholder="Your Message" style={{height:"200px",padding:"10px"}}/>
+            <FormField
+              name="email"
+              type="email"
+              label="Email Address"
+              placeholder="Enter Your Email *"
+            />
+            <FormField
+              name="message"
+              label="Message (Optional)"
+              as="textarea"
+              placeholder="Your Message"
+              style={{ height: "180px", padding: "10px" }}
+            />
 
-            <button
+            <motion.button
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.96 }}
               type="submit"
-              className="bg-blue-600 text-white font-bold w-full rounded-xl py-2 shadow-lg
-              hover:bg-plum-500 hover:scale-105 hover:shadow-xl transition-all duration-300 ease-in-out
-              active:scale-95 active:bg-plum-700 flex items-center gap-1.5 justify-center"
               disabled={isSubmitting}
+              className="bg-blue-600 text-white font-bold w-full rounded-xl py-2
+              shadow-lg flex items-center gap-2 justify-center"
             >
-             <FiSend className="text-xl"/> {isSubmitting ? "Sending ..." : "Send Message"}
-            </button>
+              <FiSend className="text-xl" />
+              {isSubmitting ? "Sending..." : "Send Message"}
+            </motion.button>
           </Form>
         )}
       </Formik>
-    </motion.section>
+    </motion.div>
   );
 };
 
