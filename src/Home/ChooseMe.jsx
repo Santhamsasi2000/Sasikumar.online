@@ -60,7 +60,7 @@ const ChooseMe = () => {
       {/* Grid */}
       <motion.div
         variants={stagger}
-        className="flex flex-wrap justify-between xs:gap-7"
+        className="flex flex-wrap justify-between gap-6 xs:gap-7"
       >
         {DataChooseMe.map(({ id, title, smallDesc }) => (
           <motion.div

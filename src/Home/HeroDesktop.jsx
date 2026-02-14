@@ -137,7 +137,7 @@ const HeroDesktop = () => {
           className="w-[45%] xl:w-[40%]"
         >
           <LazyLoadImage
-            src="/images/Home/HeroCTA/hero-img-5.webp"
+            src="/images/Home/HeroCTA/hero-img.webp"
             alt="Web Developer Hero"
             effect="blur"
             threshold={200}

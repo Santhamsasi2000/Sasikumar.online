@@ -8,12 +8,12 @@ const subtitle =
 
 const HeroMobile = () => {
   return (
-    <section className="relative mt-20 lg:hidden h-[520px] xs:h-[600px] flex items-center bg-white">
+    <section className="mt-15 xs:mt-5 relative lg:hidden h-[520px] xs:h-[600px] flex items-center bg-white">
       
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/images/Home/HeroCTA/hero-img-5.webp"
+          src="/images/Home/HeroCTA/hero-img.webp"
           alt="Web Developer working on laptop"
           className="w-full h-full object-cover"
           loading="eager" fetchPriority="high"
