@@ -12,10 +12,12 @@ const HeroMobile = () => {
       
       {/* Background Image */}
       <div className="absolute inset-0">
-        <LazyLoadImage
-          src="/images/Home/HeroCTA/hero-img-5.jpg"
+        <img
+          src="/images/Home/HeroCTA/hero-img-5.webp"
           alt="Web Developer working on laptop"
           className="w-full h-full object-cover"
+          loading="eager" fetchPriority="high"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-white/90"></div>
       </div>
@@ -31,10 +33,15 @@ const HeroMobile = () => {
         {/* Badge */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-4 py-1 rounded-full text-blue-900 font-semibold">
-            <LazyLoadImage
-              src="/images/Home/HeroCTA/hand-shake-icon.png"
+            <img
+              src="/images/Home/HeroCTA/hand-shake-icon.webp"
               alt="Available icon"
               className="w-6 h-6 animate-bounce"
+              width="32"
+              height="32"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
             />
             Available for new projects
           </span>

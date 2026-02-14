@@ -49,7 +49,7 @@ const HeroDesktop = () => {
               flex items-center gap-2"
             >
               <LazyLoadImage
-                src="/images/Home/HeroCTA/hand-shake-icon.png"
+                src="/images/Home/HeroCTA/hand-shake-icon.webp"
                 alt="Available for projects"
                 className="w-8 h-8 animate-bounce"
               />
@@ -137,10 +137,12 @@ const HeroDesktop = () => {
           className="w-[45%] xl:w-[40%]"
         >
           <LazyLoadImage
-            src="/images/Home/HeroCTA/hero-img-5.jpg"
+            src="/images/Home/HeroCTA/hero-img-5.webp"
             alt="Web Developer Hero"
-            className="rounded-2xl shadow-xl"
             effect="blur"
+            threshold={200}
+            width="500"
+            height="500"
           />
         </motion.div>
       </div>

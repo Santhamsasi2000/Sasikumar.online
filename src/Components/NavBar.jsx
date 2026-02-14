@@ -57,11 +57,15 @@ const NavBar = () => {
         
         {/* Logo / Brand */}
         <NavLink to="/" className="flex items-center gap-3 text-white">
-          <LazyLoadImage
-            src="/images/NavBar/sasikumar.online-logo-4.jpeg"
+          <img
+            src="/images/NavBar/sasikumar.online-logo.webp"
             alt="Sasikumar logo"
+            width="100"
+            height="100"
             className="w-[40px] h-[30px] sm:w-[50px] sm:h-[35px] object-contain"
-            effect="blur"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
           />
           <motion.h1
             className="text-2xl sm:text-3xl font-bold font-merienda"
