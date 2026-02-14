@@ -29,10 +29,7 @@
 
   --font-neuton: "Neuton", serif;
   --font-merienda: "Merienda", cursive;
-
 }
-
-
 
 html 
 {
@@ -57,7 +54,7 @@ body
   font-family: 'Karla';
   font-style: normal;
   font-weight: 400;
-  src: url('./fonts/karla-v33-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../public/fonts/karla-v33-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* karla-500 - latin */
 @font-face {
@@ -65,7 +62,7 @@ body
   font-family: 'Karla';
   font-style: normal;
   font-weight: 500;
-  src: url('./fonts/karla-v33-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../public/fonts/karla-v33-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* karla-600 - latin */
 @font-face {
@@ -73,7 +70,7 @@ body
   font-family: 'Karla';
   font-style: normal;
   font-weight: 600;
-  src: url('./fonts/karla-v33-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../public/fonts/karla-v33-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* karla-700 - latin */
 @font-face {
@@ -81,7 +78,7 @@ body
   font-family: 'Karla';
   font-style: normal;
   font-weight: 700;
-  src: url('./fonts/karla-v33-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../public/fonts/karla-v33-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
         /* ================== Merienda Font =================== */
@@ -92,7 +89,7 @@ body
   font-family: 'Merienda';
   font-style: normal;
   font-weight: 400;
-  src: url('./fonts/merienda-v22-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../public/fonts/merienda-v22-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* merienda-700 - latin */
 @font-face {
@@ -100,7 +97,7 @@ body
   font-family: 'Merienda';
   font-style: normal;
   font-weight: 700;
-  src: url('./fonts/merienda-v22-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../public/fonts/merienda-v22-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
           /* ================== Neuton Font =================== */
@@ -110,7 +107,7 @@ body
   font-family: 'Neuton';
   font-style: normal;
   font-weight: 400;
-  src: url('./fonts/neuton-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../public/fonts/neuton-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* neuton-700 - latin */
 @font-face {
@@ -118,5 +115,5 @@ body
   font-family: 'Neuton';
   font-style: normal;
   font-weight: 700;
-  src: url('./fonts/neuton-v24-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../public/fonts/neuton-v24-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
